@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOs\CustomerDTOs\**" />
+    <Compile Remove="DTOs\PaymentDTOs\**" />
+    <Content Remove="DTOs\CustomerDTOs\**" />
+    <Content Remove="DTOs\PaymentDTOs\**" />
+    <EmbeddedResource Remove="DTOs\CustomerDTOs\**" />
+    <EmbeddedResource Remove="DTOs\PaymentDTOs\**" />
+    <None Remove="DTOs\CustomerDTOs\**" />
+    <None Remove="DTOs\PaymentDTOs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\CustomersController.cs" />
+    <Compile Remove="Models\Cancellation.cs" />
+    <Compile Remove="Models\CancellationStatus.cs" />
+    <Compile Remove="Models\Customer.cs" />
+    <Compile Remove="Models\Feedback.cs" />
+    <Compile Remove="Models\Payment.cs" />
+    <Compile Remove="Models\PaymentStatus.cs" />
+    <Compile Remove="Models\Refund.cs" />
+    <Compile Remove="Models\RefundMethod.cs" />
+    <Compile Remove="Models\RefundStatus.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.19" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
